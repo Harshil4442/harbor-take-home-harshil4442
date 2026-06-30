@@ -1,0 +1,23 @@
+{
+    "error_strategy": "skip",
+    "stages": [
+        {
+            "type": "validate",
+            "schema": {
+                "name": {"type": "string", "required": true},
+                "age": {"type": "integer", "required": true},
+                "score": {"type": "float", "required": false}
+            }
+        },
+        {
+            "type": "transform",
+            "transforms": [
+                {"type": "compute", "field": "age_group", "expr": "age / 10"}
+            ]
+        },
+        {
+            "type": "filter",
+            "predicate": "age >= 18"
+        }
+    ]
+}
