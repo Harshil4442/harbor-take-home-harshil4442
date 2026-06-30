@@ -1,0 +1,27 @@
+# Secrets (never commit API keys or tokens)
+.env
+.env.*
+
+# Private CLI source. Only the compiled binary under bin/ is distributed.
+cli/
+
+# Static-check rubric (grader-internal; never ship to candidates).
+/static-checks.md
+docs/STATIC-CHECKS.md
+
+# Harbor run output (root and per-task jobs/)
+jobs/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# OS and editor noise
+.DS_Store
+*.swp
